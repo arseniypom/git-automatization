@@ -45,18 +45,9 @@ bot.command('menu', async (ctx) => {
 });
 
 bot.callbackQuery('order-status', async (ctx) => {
-  // await ctx.callbackQuery.message.editText('Статус заказа: в пути', {
-  //   reply_markup: backKeyboard,
-  // });
-
-  await ctx.api.editMessageText(
-    ctx.chat.id,
-    ctx.update.callback_query.message.message_id,
-    'Статус заказа: в пути',
-    {
-      reply_markup: backKeyboard,
-    },
-  );
+  await ctx.callbackQuery.message.editText('Статус заказа: в пути', {
+    reply_markup: backKeyboard,
+  });
 
   await ctx.answerCallbackQuery();
 });
