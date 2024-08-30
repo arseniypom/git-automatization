@@ -25,7 +25,7 @@ bot.api.setMyCommands([
 bot.command('start', async (ctx) => {
   await ctx.react('👍');
   await ctx.reply(
-    'Привет\\! Я – бот\\. Тг канал: [это ссылка](https://t.me/pomazkovjs)',
+    'Привет\\! Я – бот с авто-деплоем\\. Тг канал: [это ссылка](https://t.me/pomazkovjs)',
     {
       parse_mode: 'MarkdownV2',
       disable_web_page_preview: true,
